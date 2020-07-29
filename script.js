@@ -26,11 +26,7 @@ $(document).ready(function() {
     $(".time-block").each(function() {
       var blockHour = parseInt($(this).attr("id").split("-")[1]);
 
-      console.log("block hour:", blockHour);
-
       // check if we've moved past this time
-
-      
       // if the current hour is greater than the block hour
       // then add class "past"   
       // if they are equal
@@ -41,18 +37,15 @@ $(document).ready(function() {
       //comparing currentHour to 9
       if (currentHour > 9){
         $(".textarea9").addClass("past")
-        console.log(blockHour + " " + "past");
   
       } else if (currentHour == 9){
         $(".textarea9").removeClass("past");
         $(".textarea9").addClass("present");
-        console.log(blockHour + " " + "present");
         
       } else if (currentHour < 9){
         $(".textarea9").removeClass("past");
         $(".textarea9").removeClass("present");
         $(".textarea9").addClass("future");
-        console.log(blockHour + " " + "future");
       }
 
       //comparing currentHour to 10
@@ -174,19 +167,14 @@ $(document).ready(function() {
         $(".textarea17").removeClass("present");
         $(".textarea17").addClass("future");
       }
-
-      
-        
     });
   }
 
-  hourUpdater();
-
-
-
   // set up interval to check if current time needs to be updated
   // which means execute hourUpdater function every 15 seconds
+  setInterval(hourUpdater(), 15000);
 
+  
   // load any saved data from localStorage
   
 
