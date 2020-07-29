@@ -176,7 +176,9 @@ $(document).ready(function() {
 
   
   // load any saved data from localStorage
-  
+  // for (const [time, value] of entries) {
+  //   console.log('It is ${time} ${value}')
+  // }
 
   // display current day on page
   $("#currentDay").text(moment().format("dddd, MMMM Do"));
