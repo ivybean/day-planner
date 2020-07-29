@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     console.log(localStorage);  
   });
-  $('textarea').text(window.localStorage.getItem("value"));
+  
 
   function hourUpdater() {
     // get current number of hours
@@ -176,10 +176,11 @@ $(document).ready(function() {
 
   
   // load any saved data from localStorage
-  // for (const [time, value] of entries) {
-  //   console.log('It is ${time} ${value}')
+  // for (const [key, value] of Object.entries(localStorage)) {
+  // console.log(${key} | ${value});
   // }
-
+  console.log(Object.entries(localStorage));
+  
   // display current day on page
   $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
