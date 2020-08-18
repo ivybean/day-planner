@@ -22,6 +22,7 @@ textarea{
   border-left: 1px solid black;
   padding: 10px;
   z-index: 1;
+  font-family: 'Pangolin', cursive;
 }
 
 .jumbotron {
@@ -30,6 +31,16 @@ textarea{
   color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+}
+
+.lead {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .description{
