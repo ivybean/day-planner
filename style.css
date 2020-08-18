@@ -4,6 +4,16 @@ body {
   line-height: 1;
 }
 
+.container-fluid {
+  background-image: url(notebook-paper.jpg);
+}
+
+.planner {
+  width: 80%;
+  margin-right: 0;
+  margin-left: 200px;
+}
+
 textarea{
   background: transparent;
   border: none;
@@ -11,12 +21,13 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  z-index: 1;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-color: #8338ec;
+  color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
@@ -33,7 +44,7 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
 .hour {
@@ -43,17 +54,17 @@ textarea{
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color: #ffbe0b;
+  color: black;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #fb5607;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #3a86ff;
   color: white;
 }
 
@@ -61,7 +72,7 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #77dd77;
   color: white;
 }
 
