@@ -1,5 +1,20 @@
+var schedule = {}
+
 $(document).ready(function() {
   // listen for save button clicks
+
+  schedule = JSON.parse(localStorage.getItem("schedule")) || {};
+
+  function setSchedule(schedule) {
+    for (var time in schedule){
+      var hour = time.split("-")[1];
+      var textAreaClass = `.textarea${hour}`;
+      var entry = schedule[time];
+      $(textAreaClass).val(entry);
+    }
+  }
+
+  setSchedule(schedule);
 
   $(".saveBtn").on("click", function() {
     // get nearby values
@@ -10,8 +25,8 @@ $(document).ready(function() {
     console.log('time:', time);
 
     // save the value in localStorage as time
-
-    localStorage.setItem(time, value);
+    schedule[time] = value;
+    localStorage.setItem("schedule", JSON.stringify(schedule));
 
     console.log(localStorage);  
   });
