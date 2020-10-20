@@ -7,3 +7,7 @@ The saved information will be rendered on the refresh of the page.
 
 # Screenshots of Application
 ![alt text](assets/day-planner.png "Day Planner")
+
+# Deployment
+
+[link to deployment](https://ivybean.github.io/day-planner/)
